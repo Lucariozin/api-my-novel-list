@@ -4,7 +4,7 @@ import { NovelReviewsRepository } from "@/infra/repositories/novel-reviews-repos
 export class InMemoryNovelReviewRepository implements NovelReviewsRepository {
   private readonly novelReviews: NovelReview[] = [];
 
-  async getAllReviewsByNovelId(novelId: string): Promise<NovelReview[]> {
+  async getAllNovelReviewsByNovelId(novelId: string): Promise<NovelReview[]> {
     const reviews = this.novelReviews.filter((novelReview) => {
       if (novelReview.novelId === novelId) return novelReview;
     });
