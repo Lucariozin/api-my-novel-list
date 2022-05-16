@@ -20,7 +20,7 @@ describe('Create novel use case', () => {
     try {
       await createNovelUseCase.execute(fakeNovelData);
 
-      const novelHasBeenCreated = await inMemoryNovelsRepository.getNovelByTitle('Fake title');
+      const novelHasBeenCreated = await inMemoryNovelsRepository.getNovelByTitle(fakeNovelData.title);
 
       expect(novelHasBeenCreated).toBeTruthy();
     } catch {}
