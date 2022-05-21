@@ -17,12 +17,10 @@ describe('Create novel use case', () => {
 
     expect.assertions(1);
 
-    try {
-      await createNovelUseCase.execute(fakeNovelData);
+    await createNovelUseCase.execute(fakeNovelData);
 
-      const novelHasBeenCreated = await inMemoryNovelsRepository.getNovelByTitle(fakeNovelData.title);
+    const novelHasBeenCreated = await inMemoryNovelsRepository.getNovelByTitle(fakeNovelData.title);
 
-      expect(novelHasBeenCreated).toBeTruthy();
-    } catch {}
+    expect(novelHasBeenCreated).toBeTruthy();
   });
 });

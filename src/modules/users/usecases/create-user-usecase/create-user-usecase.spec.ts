@@ -1,5 +1,5 @@
 import { InMemoryUsersRepository } from '@/infra/repositories/users-repository/implementations/in-memory-users-repository';
-import { UserDto } from '@/modules/users/dto/user-dto';
+import { UserDto } from '@/modules/users/dtos/user-dto';
 import { CreateUserUseCase } from '@/modules/users/usecases/create-user-usecase';
 
 describe('Create user use case', () => {

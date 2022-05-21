@@ -1,5 +1,5 @@
 import { User } from '@/domain/entities/user';
-import { UserDto } from '@/modules/users/dto/user-dto';
+import { UserDto } from '@/modules/users/dtos/user-dto';
 import { UsersRepository } from '@/infra/repositories/users-repository/contract-users-repository';
 
 export class CreateUserUseCase {

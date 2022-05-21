@@ -7,14 +7,18 @@ export class CreateNovelUseCase {
     private readonly novelsRepository: NovelsRepository,
   ) {}
 
-  async execute(data: NovelDto) {
-    const novelAlreadyExists = await this.novelsRepository.getNovelByTitle(data.title);
+  async execute({ stars, title, ...rest }: NovelDto) {
+    if (stars < 0 || stars > 5) {
+      throw new Error('The stars must be between 0 and 5.');
+    }
+
+    const novelAlreadyExists = await this.novelsRepository.getNovelByTitle(title);
 
     if (novelAlreadyExists) {
       throw new Error('There is already a novel with the same title.');
     }
 
-    const newNovel = new Novel(data);
+    const newNovel = new Novel({ stars, title, ...rest });
 
     const createdNovel = await this.novelsRepository.create(newNovel);
 
