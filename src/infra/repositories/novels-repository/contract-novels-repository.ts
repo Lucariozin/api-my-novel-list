@@ -5,4 +5,5 @@ export interface NovelsRepository {
   update: (novelId: string, data: Novel) => Promise<Novel | null>;
   getNovelById: (novelId: string) => Promise<Novel | null>;
   getNovelByTitle: (title: string) => Promise<Novel | null>;
+  getAllNovels: () => Promise<Novel[]>;
 }

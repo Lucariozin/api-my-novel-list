@@ -38,4 +38,8 @@ export class InMemoryNovelsRepository implements NovelsRepository {
 
     return novel;
   }
+
+  async getAllNovels(): Promise<Novel[]> {
+    return [...this.novels];
+  }
 }
