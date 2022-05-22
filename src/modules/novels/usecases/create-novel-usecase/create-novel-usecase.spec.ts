@@ -12,6 +12,7 @@ describe('Create novel use case', () => {
       title: 'Fake title',
       cover: 'Fake cover',
       sinopse: 'Fake sinopse',
+      genres: ['Fake genre'],
       stars: 0
     }
 

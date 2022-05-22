@@ -32,6 +32,7 @@ export class EvaluateNovelUseCase {
       title: novel.title,
       cover: novel.cover,
       sinopse: novel.sinopse,
+      genres: novel.genres,
       stars: novelStars,
     }, novel.id);
 

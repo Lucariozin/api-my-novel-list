@@ -7,8 +7,8 @@ No My Novel List o usuário pode ver as novels mais populares do momento e criar
 - A aplicação deve ter um sistema de autenticação.
 - Qualquer usuário pode ver as novels mais populares do momento e suas respectivas estrelas.
 - Qualquer usuário pode ver a biblioteca de novels existentes na aplicação.
-- Somente usuários autenticados podem criar sua própria lista de novels favoritas.
-- Somente usuários autenticados podem avaliar as novels com estrelas.
+- Somente usuários que possuem uma conta podem adicionar novels à sua lista de novels.
+- Somente usuários que possuem uma conta podem avaliar as novels com estrelas.
 
 # Regras de negócio
 

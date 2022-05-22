@@ -4,6 +4,7 @@ interface NovelProps {
   title: string;
   sinopse: string;
   cover: string;
+  genres: string[];
   stars: number;
 }
 
@@ -25,6 +26,10 @@ export class Novel {
 
   get cover(): string {
     return this.props.cover;
+  }
+
+  get genres(): string[] {
+    return this.props.genres;
   }
 
   get stars(): number {
